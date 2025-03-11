@@ -42,4 +42,5 @@ pip install scikit-learn pandas matplotlib
 ### 3. Run the Jupyter Notebook:
 Go to the code editor and run the code,s ince we are using a notebook, it is better to open the code in an editor that supports this type of file, such as [**Jupyter**](https://jupyter.org/), which is specialized in this.
 ## 📈 Results & Performance:
-To evaluate the model, we used R² Score as the primary metric. The model performed well in predicting house prices based on the given features.
+-------------------
+To evaluate the model, we used R² Score as the primary metric. The model performed well in predicting house prices based on the given features.![the results](MLProject/models_r2_score.png)

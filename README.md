@@ -43,7 +43,7 @@ pip install scikit-learn pandas matplotlib
 Go to the code editor and run the code,s ince we are using a notebook, it is better to open the code in an editor that supports this type of file, such as [**Jupyter**](https://jupyter.org/), which is specialized in this.
 ## 📈 Results & Performance:
 After applying the models to our data, these were the results:
-### 1. R² score result
+### 1. R² score results
 <img src="MLProject/R² result.png" width="500" align="right" style="margin: 10px">
 
 1. **`RandomForestRegression`**: 0.8267259143597692
@@ -51,7 +51,7 @@ After applying the models to our data, these were the results:
 3. **`Lasso`**: 0.678302118086267
 4. **`Ridge`**: 0.6720123566569238
 
-The higher the R² score, the better. Therefore, the model is the best in terms of R² score, range: 0 to 1 (1 = perfect fit, 0 = no explanation).
+The smaller the MSE number, the better model, with range: 0 to 1 (1 = perfect fit, 0 = no explanation), which means that the **randomforestregressor** model is the best
 
 We use R² to understand how well the model captures the variation in the data.
 
@@ -59,7 +59,8 @@ We use R² to understand how well the model captures the variation in the data.
 
 So we cannot rely on it alone and we must follow more than one method to calculate accuracy.
 
--------------------
+--------------------
+### 2. MAE results
 <img src="MLProject/MAE result.png" width="500" align="right" style="margin: 10px">
 
 1. **`RandomForestRegression`**: 2.2050901960784315
@@ -67,19 +68,24 @@ So we cannot rely on it alone and we must follow more than one method to calcula
 3. **`Lasso`**: 3.6846024102558808
 4. **`Ridge`**: 3.73248469819937
 
+The smaller the MSE number, the better the model, with range: 0 to infinity (lower is better), which means that the **randomforestregressor** model is the best
+
 We use the MAE to evaluate the accuracy of predictions in the same units as the target variable.
 
 **More sensitive to large errors (outliers).**
 
 So we cannot rely on it alone and we must follow more than one method to calculate accuracy.
 
--------------------
+--------------------
+### 3. RMSE results
 <img src="MLProject/RMSE result.png" width="500" align="right" style="margin: 10px">
 
 1. **`RandomForestRegression`**: 12.412397025098072
 2. **`LinearRegression`**: 22.765134036498836
 3. **`Lasso`**: 23.044656779993783
 4. **`Ridge`**: 23.495220496810933
+
+The smaller the MSE number, the better the model, with range: 0 to infinity (lower is better), which means that the **randomforestregressor** model is the best
 
 We use the RMSE to evaluate the accuracy of predictions in the same units as the target variable.
 
@@ -89,10 +95,3 @@ So we cannot rely on it alone and we must follow more than one method to calcula
 
 ## 📜 License:
 This project is open-source and licensed under the MIT License. Feel free to use and modify it!
-
-
-
-1. **`RandomForestRegression`**: **R²** is 0.8267259143597692, **RMSE** is 12.412397025098072, **MAE** is 2.2050901960784315, is the best model.
-2. **`LinearRegression`**: **R²** is 0.682204188548306, **RMSE** is 22.765134036498836, **MAE** is 3.686644639104774.
-3. **`Lasso`**: **R²** is 0.678302118086267, **RMSE** is 23.044656779993783, **MAE** is 3.6846024102558808.
-4. **`Ridge`**: **R²** is 0.6720123566569238, **RMSE** is 23.495220496810933, **MAE** is 3.73248469819937.

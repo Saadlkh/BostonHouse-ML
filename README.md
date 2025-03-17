@@ -51,13 +51,14 @@ After applying the models to our data, these were the results:
 3. **`Lasso`**: 0.678302118086267
 4. **`Ridge`**: 0.6720123566569238
 
-The smaller the MSE number, the better model, with range: 0 to 1 (1 = perfect fit, 0 = no explanation), which means that the **randomforestregressor** model is the best
+> Use R² to understand how much variance the model explains.
+> We use R² to understand how well the model captures the variation in the data.
 
-We use R² to understand how well the model captures the variation in the data.
+The smaller the MSE number, the better model, with range: 0 to 1 (1 = perfect fit, 0 = no explanation), which means that the **randomforestregressor** model is the best
 
 **It doesn’t tell you the actual size of errors.**
 
-So we cannot rely on it alone and we must follow more than one method to calculate accuracy.
+So we cannot rely on it alone and we must follow more than one method to calcu
 
 --------------------
 ### 2. MAE results
@@ -68,11 +69,12 @@ So we cannot rely on it alone and we must follow more than one method to calcula
 3. **`Lasso`**: 3.6846024102558808
 4. **`Ridge`**: 3.73248469819937
 
+> Use MAE to measure average error size, especially if outliers are a concern.
+> We use the MAE to evaluate the accuracy of predictions in the same units as the target variable.
+
 The smaller the MSE number, the better the model, with range: 0 to infinity (lower is better), which means that the **randomforestregressor** model is the best
 
-We use the MAE to evaluate the accuracy of predictions in the same units as the target variable.
-
-**More sensitive to large errors (outliers).**
+**Less sensitive to outliers compared to RMSE.**
 
 So we cannot rely on it alone and we must follow more than one method to calculate accuracy.
 
@@ -85,9 +87,10 @@ So we cannot rely on it alone and we must follow more than one method to calcula
 3. **`Lasso`**: 23.044656779993783
 4. **`Ridge`**: 23.495220496810933
 
-The smaller the MSE number, the better the model, with range: 0 to infinity (lower is better), which means that the **randomforestregressor** model is the best
+> We use the RMSE to evaluate the accuracy of predictions in the same units as the target variable.
+> Use RMSE to measure prediction accuracy, especially if large errors are important.
 
-We use the RMSE to evaluate the accuracy of predictions in the same units as the target variable.
+The smaller the MSE number, the better the model, with range: 0 to infinity (lower is better), which means that the **randomforestregressor** model is the best.
 
 **More sensitive to large errors (outliers).**
 

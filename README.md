@@ -42,9 +42,59 @@ pip install scikit-learn pandas matplotlib
 ### 3. Run the Jupyter Notebook:
 Go to the code editor and run the code,s ince we are using a notebook, it is better to open the code in an editor that supports this type of file, such as [**Jupyter**](https://jupyter.org/), which is specialized in this.
 ## 📈 Results & Performance:
-To evaluate the model, we used R² Score as the primary metric. The model performed well in predicting house prices based on the given features.
--------------------
-<img src="MLProject/models_r2_score.png" alt="Description" style="width: 50%;">
+After applying the models to our data, these were the results:
+### 1. R² score results
+<img src="MLProject/R² result.png" width="500" align="right" style="margin: 10px">
+
+1. **`RandomForestRegression`**: 0.8267259143597692
+2. **`LinearRegression`**: 0.682204188548306
+3. **`Lasso`**: 0.678302118086267
+4. **`Ridge`**: 0.6720123566569238
+
+> Use R² to understand how much variance the model explains.
+> We use R² to understand how well the model captures the variation in the data.
+
+The smaller the MSE number, the better model, with range: 0 to 1 (1 = perfect fit, 0 = no explanation), which means that the **randomforestregressor** model is the best
+
+**It doesn’t tell you the actual size of errors.**
+
+So we cannot rely on it alone and we must follow more than one method to calcu
+
+--------------------
+### 2. MAE results
+<img src="MLProject/MAE result.png" width="500" align="right" style="margin: 10px">
+
+1. **`RandomForestRegression`**: 2.2050901960784315
+2. **`LinearRegression`**: 3.686644639104774
+3. **`Lasso`**: 3.6846024102558808
+4. **`Ridge`**: 3.73248469819937
+
+> Use MAE to measure average error size, especially if outliers are a concern.
+> We use the MAE to evaluate the accuracy of predictions in the same units as the target variable.
+
+The smaller the MAE number, the better the model, with range: 0 to infinity (lower is better), which means that the **randomforestregressor** model is the best
+
+**Less sensitive to outliers compared to RMSE.**
+
+So we cannot rely on it alone and we must follow more than one method to calculate accuracy.
+
+--------------------
+### 3. RMSE results
+<img src="MLProject/RMSE result.png" width="500" align="right" style="margin: 10px">
+
+1. **`RandomForestRegression`**: 12.412397025098072
+2. **`LinearRegression`**: 22.765134036498836
+3. **`Lasso`**: 23.044656779993783
+4. **`Ridge`**: 23.495220496810933
+
+> We use the RMSE to evaluate the accuracy of predictions in the same units as the target variable.
+> Use RMSE to measure prediction accuracy, especially if large errors are important.
+
+The smaller the MSE number, the better the model, with range: 0 to infinity (lower is better), which means that the **randomforestregressor** model is the best.
+
+**More sensitive to large errors (outliers).**
+
+So we cannot rely on it alone and we must follow more than one method to calculate accuracy.
 
 ## 📜 License:
 This project is open-source and licensed under the MIT License. Feel free to use and modify it!

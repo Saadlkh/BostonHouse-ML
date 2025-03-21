@@ -72,7 +72,7 @@ So we cannot rely on it alone and we must follow more than one method to calcu
 > Use MAE to measure average error size, especially if outliers are a concern.
 > We use the MAE to evaluate the accuracy of predictions in the same units as the target variable.
 
-The smaller the MSE number, the better the model, with range: 0 to infinity (lower is better), which means that the **randomforestregressor** model is the best
+The smaller the MAE number, the better the model, with range: 0 to infinity (lower is better), which means that the **randomforestregressor** model is the best
 
 **Less sensitive to outliers compared to RMSE.**
 
